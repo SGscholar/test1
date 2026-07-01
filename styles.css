@@ -505,6 +505,12 @@ footer p{
     text-align:center;
 }
 
+#booking_new{
+   display: flex;
+  justify-content: center; /* Horizontally centers the div */
+  align-items: center;
+}
+
 /* ensures section containers don't force left alignment */
 #contact .cta-center,
 #academy .cta-center{
