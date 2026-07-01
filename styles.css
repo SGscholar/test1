@@ -25,6 +25,11 @@ body {
     line-height: 1.6;
 }
 
+section {
+    padding: 90px 8%;
+    position: relative;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -87,8 +92,9 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 80px 8%;
+    padding: 90px 8%;
     gap: 40px;
+    min-height: 85vh;
 }
 
 .hero-content {
