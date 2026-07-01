@@ -1,8 +1,8 @@
 /* =========================================================
    COACHCARTS LAB
-   FULL STYLESHEET (UPDATED)
-   Fixes: Hero dominance, About spacing, Leadership layout,
-   Coach contact alignment, readability improvements
+   FULL STYLESHEET (REFINED)
+   Fixes: spacing rhythm, hero balance, CTA alignment,
+   offerings positioning, and structural consistency
    ========================================================= */
 
 /* ================= ROOT ================= */
@@ -53,6 +53,16 @@ ul{
     padding-left:20px;
 }
 
+/* ================= GLOBAL SECTION SPACING (IMPORTANT FIX) ================= */
+
+section{
+    padding:70px 8%;
+}
+
+section + section{
+    padding-top:60px;
+}
+
 /* ================= TYPOGRAPHY ================= */
 
 .section-title{
@@ -64,21 +74,15 @@ ul{
 
 .section-subtitle{
     max-width:760px;
-    margin:0 auto 45px;
+    margin:0 auto 35px;
     text-align:center;
     color:var(--muted);
 }
 
 .subsection-title{
     font-size:1.6rem;
-    margin:45px 0 20px;
+    margin:40px 0 20px;
     text-align:center;
-}
-
-/* ================= LAYOUT ================= */
-
-section{
-    padding:90px 8%;
 }
 
 /* ================= NAVBAR ================= */
@@ -135,10 +139,11 @@ section{
     justify-content:center;
     align-items:center;
     padding:14px 28px;
-    border-radius:16px;
+    border-radius:18px;
     font-weight:600;
     transition:var(--transition);
     cursor:pointer;
+    white-space:nowrap;
 }
 
 .btn.primary{
@@ -167,10 +172,10 @@ section{
     transform:translateY(-2px);
 }
 
-/* ================= HERO (FIXED DOMINANCE) ================= */
+/* ================= HERO (BALANCED DOMINANCE FIX) ================= */
 
 .hero{
-    min-height:90vh;
+    min-height:88vh;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -178,55 +183,58 @@ section{
 }
 
 .hero-content{
-    flex:0.9;
-    max-width:600px;
+    flex:1;
+    max-width:620px;
 }
 
 .hero h1{
-    font-size:3.2rem;
+    font-size:3.1rem;
     line-height:1.15;
-    margin-bottom:22px;
+    margin-bottom:18px;
 }
 
-.hero h1 span{
-    color:var(--primary);
+.hero h2{
+    color:var(--muted);
+    font-weight:500;
+    margin-bottom:18px;
 }
 
 .hero p{
     color:var(--muted);
     font-size:1.05rem;
+    margin-bottom:14px;
 }
 
 .hero-buttons{
     display:flex;
     gap:18px;
-    margin-top:35px;
+    margin-top:30px;
     flex-wrap:wrap;
 }
 
 .hero-image{
-    flex:1.2;
+    flex:1.1;
     display:flex;
     justify-content:center;
     align-items:center;
 }
 
 .hero-card{
-    width:420px;
+    width:380px;
     background:#fff;
     border:1px solid var(--border);
     border-radius:26px;
-    box-shadow:0 20px 60px rgba(0,0,0,.10);
-    padding:55px 45px;
+    box-shadow:0 18px 50px rgba(0,0,0,.08);
+    padding:50px 40px;
     text-align:center;
 }
 
 .king{
-    font-size:7rem;
-    margin-bottom:16px;
+    font-size:6.2rem;
+    margin-bottom:14px;
 }
 
-/* ================= ABOUT (FIXED READABILITY) ================= */
+/* ================= ABOUT (READABILITY FIX) ================= */
 
 #about{
     background:#fafafa;
@@ -239,38 +247,12 @@ section{
 
 .about-container p{
     color:var(--muted);
-    margin-bottom:28px;
+    margin-bottom:22px;
     font-size:1.05rem;
     line-height:1.85;
 }
 
-.about-container p + p{
-    margin-top:22px;
-}
-
-/* ================= MISSION ================= */
-
-#mission{
-    text-align:center;
-}
-
-.mission-card{
-    max-width:900px;
-    margin:40px auto 0;
-    background:#fff;
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    padding:40px;
-    box-shadow:var(--shadow);
-}
-
-.mission-card p{
-    color:var(--muted);
-    font-size:1.05rem;
-    line-height:1.8;
-}
-
-/* ================= LEADERSHIP (FIXED) ================= */
+/* ================= LEADERSHIP ================= */
 
 #leadership{
     background:#fafafa;
@@ -279,15 +261,15 @@ section{
 .leadership-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:28px;
-    margin-top:40px;
+    gap:26px;
+    margin-top:35px;
 }
 
 .leader-card{
     background:#fff;
     border:1px solid var(--border);
     border-radius:18px;
-    padding:30px 26px;
+    padding:28px;
     text-align:center;
     box-shadow:0 4px 14px rgba(0,0,0,.03);
     transition:var(--transition);
@@ -298,15 +280,29 @@ section{
     box-shadow:var(--shadow);
 }
 
-.leader-card h4{
-    margin-bottom:12px;
-    font-size:1.15rem;
-}
-
 .leader-card p{
     color:var(--muted);
     font-size:.95rem;
-    line-height:1.7;
+}
+
+/* ================= COACH CONTACT (ROBUST INLINE FIX) ================= */
+
+.coach-contact,
+.coach-links{
+    margin-top:12px;
+    padding-top:12px;
+    border-top:1px solid var(--border);
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+    font-size:.9rem;
+    color:var(--muted);
+}
+
+.coach-contact strong,
+.coach-links strong{
+    color:var(--text);
 }
 
 /* ================= COACHES ================= */
@@ -318,15 +314,15 @@ section{
 .coach-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:28px;
-    margin-top:45px;
+    gap:26px;
+    margin-top:40px;
 }
 
 .coach-card{
-    background:var(--card);
+    background:#fff;
     border:1px solid var(--border);
     border-radius:20px;
-    padding:28px;
+    padding:26px;
     text-align:center;
     transition:var(--transition);
     box-shadow:0 6px 18px rgba(0,0,0,.04);
@@ -338,16 +334,12 @@ section{
 }
 
 .coach-card img{
-    width:150px;
-    height:150px;
+    width:140px;
+    height:140px;
     object-fit:cover;
     border-radius:50%;
-    margin:0 auto 20px;
+    margin:0 auto 18px;
     border:4px solid #f4f4f4;
-}
-
-.coach-card h3{
-    margin-bottom:6px;
 }
 
 .coach-card p{
@@ -355,66 +347,35 @@ section{
     margin-bottom:12px;
 }
 
-/* ================= COACH CONTACT (FIXED) ================= */
+/* ================= OFFERINGS (PULLED UP VISUALLY) ================= */
 
-.coach-contact{
-    margin-top:14px;
-    padding-top:12px;
-    border-top:1px solid var(--border);
-    display:flex;
-    justify-content:center;
-    gap:14px;
-    flex-wrap:wrap;
-    font-size:.9rem;
-    color:var(--muted);
+#offerings{
+    padding-top:55px;
 }
-
-.coach-contact span{
-    white-space:nowrap;
-}
-
-.coach-contact strong{
-    color:var(--text);
-}
-
-/* ================= OFFERINGS / LESSONS ================= */
 
 .lesson-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:28px;
-    margin-top:35px;
+    gap:26px;
+    margin-top:30px;
 }
+
+/* ================= LESSON CARDS ================= */
 
 .lesson-card{
     background:#fff;
     border:1px solid var(--border);
     border-radius:18px;
-    padding:28px;
+    padding:26px;
     display:flex;
     flex-direction:column;
-    transition:var(--transition);
     box-shadow:0 4px 14px rgba(0,0,0,.03);
+    transition:var(--transition);
 }
 
 .lesson-card:hover{
-    transform:translateY(-7px);
+    transform:translateY(-6px);
     box-shadow:var(--shadow);
-}
-
-.lesson-card h3{
-    font-size:1.35rem;
-    margin-bottom:16px;
-}
-
-.lesson-card h4{
-    margin-bottom:12px;
-    color:var(--muted);
-}
-
-.lesson-card p{
-    color:var(--muted);
-    margin-bottom:18px;
 }
 
 .lesson-card ul{
@@ -422,33 +383,29 @@ section{
     flex-grow:1;
 }
 
-.lesson-card li{
-    margin-bottom:10px;
-}
+/* ================= CTA FIX ================= */
 
-.lesson-footer{
+.lesson-cta{
     display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-top:30px;
+    justify-content:center;
+    margin-top:28px;
 }
 
-/* ================= IMPACT / FEATURES ================= */
+/* ================= FEATURES ================= */
 
 .features{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:24px;
-    margin-top:45px;
+    gap:22px;
+    margin-top:35px;
 }
 
 .feature{
     background:#fff;
     border:1px solid var(--border);
     border-radius:18px;
-    padding:30px 24px;
+    padding:26px;
     transition:var(--transition);
-    box-shadow:0 4px 14px rgba(0,0,0,.03);
 }
 
 .feature:hover{
@@ -456,27 +413,18 @@ section{
     box-shadow:var(--shadow);
 }
 
-.feature h3{
-    font-size:1.45rem;
-    margin-bottom:12px;
-}
-
-.feature p{
-    color:var(--muted);
-}
-
 /* ================= FOOTER ================= */
 
 footer{
     background:#111;
     color:#ddd;
-    padding:60px 8%;
+    padding:55px 8%;
     text-align:center;
 }
 
 footer p{
     color:#bdbdbd;
-    margin:8px 0;
+    margin:6px 0;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -507,14 +455,6 @@ footer p{
     .leadership-grid{
         grid-template-columns:1fr;
     }
-
-}
-
-/*  +============================= CHANGES ==============================*/
-.lesson-cta{
-    display:flex;
-    justify-content:center;
-    margin-top:40px;
 }
 
 @media (max-width:600px){
@@ -530,5 +470,4 @@ footer p{
     .hero-buttons{
         flex-direction:column;
     }
-
 }
