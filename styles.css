@@ -2,17 +2,19 @@
    COACH CARTS LAB STYLES
    ========================= */
 
+/* ================= THEME ================= */
+
 :root {
-    --primary: #111111;
-    --primary-dark: #000000;
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
     --bg: #ffffff;
     --card: #ffffff;
-    --text: #111111;
-    --muted: #555555;
-    --border: #e5e5e5;
+    --text: #0f172a;
+    --muted: #64748b;
+    --border: #e2e8f0;
 }
 
-/* Reset */
+/* ================= RESET ================= */
 
 * {
     margin: 0;
@@ -136,6 +138,18 @@ html {
 
 /* ================= BUTTONS ================= */
 
+.btn {
+    padding: 14px 20px;
+    border-radius: 14px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: 0.2s ease;
+    white-space: nowrap;
+}
+
 .btn.primary {
     background: var(--primary);
     color: white;
@@ -143,19 +157,23 @@ html {
 }
 
 .btn.primary:hover {
-    background: white;
-    color: black;
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-1px);
 }
 
 .btn.secondary {
-    border: 1px solid black;
-    color: black;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    background: white;
 }
 
 .btn.secondary:hover {
-    background: black;
+    background: var(--primary);
     color: white;
+    transform: translateY(-1px);
 }
+
 /* ================= WHY SECTION ================= */
 
 .why {
@@ -210,6 +228,8 @@ html {
     border-radius: 16px;
     padding: 24px;
     transition: 0.2s;
+    display: flex;
+    flex-direction: column;
 }
 
 .lesson-card:hover {
@@ -230,28 +250,27 @@ html {
     margin-top: 10px;
     padding-left: 18px;
     color: var(--muted);
+    flex-grow: 1;
 }
 
+/* footer alignment fix */
 .lesson-footer {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 44px;
+    min-height: 48px;
 }
 
 .lesson-footer h3 {
     margin: 0;
     line-height: 1;
-    align-self: center;
-}
-.lesson-card {
-    display: flex;
-    flex-direction: column;
+    font-size: 16px;
 }
 
-.lesson-card ul {
-    flex-grow: 1;
+/* button spacing inside cards */
+.lesson-footer .btn {
+    margin-left: 12px;
 }
 
 /* ================= COACHES ================= */
@@ -329,7 +348,7 @@ footer {
     color: var(--muted);
 }
 
-/* ================ KING ======== */
+/* ================= KING ================= */
 
 .king {
     font-size: 80px;
