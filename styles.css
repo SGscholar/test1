@@ -540,6 +540,29 @@ footer p{
     flex-wrap:wrap;
     margin-top:10px;
 }
+/* ================= PLATFORMS FIX ================= */
+
+#platforms .lesson-card{
+    text-align: center;
+    align-items: center;
+}
+
+/* center paragraph text */
+#platforms .lesson-card p{
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+/* space between text and button */
+#platforms .lesson-card .btn{
+    margin-top: 10px;
+}
+
+/* ensure button container doesn’t stretch awkwardly */
+#platforms .lesson-card a{
+    display: inline-flex;
+    justify-content: center;
+}
 
 /* ensures section containers don't force left alignment */
 #contact .cta-center,
