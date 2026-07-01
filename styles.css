@@ -1,8 +1,11 @@
 /* =========================================================
    COACHCARTS LAB
-   STYLESHEET - PART 1
-   Global • Navbar • Hero • About • Mission • Leadership
+   FULL STYLESHEET (UPDATED)
+   Fixes: Hero dominance, About spacing, Leadership layout,
+   Coach contact alignment, readability improvements
    ========================================================= */
+
+/* ================= ROOT ================= */
 
 :root{
     --primary:#111111;
@@ -33,21 +36,17 @@ html{
 body{
     background:var(--bg);
     color:var(--text);
-    line-height:1.7;
-}
-
-section{
-    padding:90px 8%;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
+    line-height:1.75;
 }
 
 img{
     display:block;
     max-width:100%;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
 }
 
 ul{
@@ -74,6 +73,12 @@ ul{
     font-size:1.6rem;
     margin:45px 0 20px;
     text-align:center;
+}
+
+/* ================= LAYOUT ================= */
+
+section{
+    padding:90px 8%;
 }
 
 /* ================= NAVBAR ================= */
@@ -162,10 +167,10 @@ ul{
     transform:translateY(-2px);
 }
 
-/* ================= HERO ================= */
+/* ================= HERO (FIXED DOMINANCE) ================= */
 
 .hero{
-    min-height:85vh;
+    min-height:90vh;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -173,8 +178,8 @@ ul{
 }
 
 .hero-content{
-    flex:1;
-    max-width:650px;
+    flex:0.9;
+    max-width:600px;
 }
 
 .hero h1{
@@ -200,37 +205,28 @@ ul{
 }
 
 .hero-image{
-    flex:1;
+    flex:1.2;
     display:flex;
     justify-content:center;
     align-items:center;
 }
 
 .hero-card{
-    width:340px;
+    width:420px;
     background:#fff;
     border:1px solid var(--border);
-    border-radius:22px;
-    box-shadow:var(--shadow);
-    padding:40px;
+    border-radius:26px;
+    box-shadow:0 20px 60px rgba(0,0,0,.10);
+    padding:55px 45px;
     text-align:center;
 }
 
 .king{
-    font-size:5.5rem;
-    margin-bottom:12px;
+    font-size:7rem;
+    margin-bottom:16px;
 }
 
-.hero-card h3{
-    font-size:1.7rem;
-    margin-bottom:8px;
-}
-
-.hero-card p{
-    color:var(--muted);
-}
-
-/* ================= ABOUT ================= */
+/* ================= ABOUT (FIXED READABILITY) ================= */
 
 #about{
     background:#fafafa;
@@ -243,8 +239,13 @@ ul{
 
 .about-container p{
     color:var(--muted);
-    margin-bottom:22px;
+    margin-bottom:28px;
     font-size:1.05rem;
+    line-height:1.85;
+}
+
+.about-container p + p{
+    margin-top:22px;
 }
 
 /* ================= MISSION ================= */
@@ -266,9 +267,10 @@ ul{
 .mission-card p{
     color:var(--muted);
     font-size:1.05rem;
+    line-height:1.8;
 }
 
-/* ================= LEADERSHIP ================= */
+/* ================= LEADERSHIP (FIXED) ================= */
 
 #leadership{
     background:#fafafa;
@@ -276,19 +278,19 @@ ul{
 
 .leadership-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-    gap:24px;
-    margin-top:25px;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:28px;
+    margin-top:40px;
 }
 
 .leader-card{
     background:#fff;
     border:1px solid var(--border);
-    border-radius:16px;
-    padding:25px;
+    border-radius:18px;
+    padding:30px 26px;
     text-align:center;
-    transition:var(--transition);
     box-shadow:0 4px 14px rgba(0,0,0,.03);
+    transition:var(--transition);
 }
 
 .leader-card:hover{
@@ -297,24 +299,15 @@ ul{
 }
 
 .leader-card h4{
-    margin-bottom:10px;
+    margin-bottom:12px;
     font-size:1.15rem;
 }
 
 .leader-card p{
     color:var(--muted);
     font-size:.95rem;
+    line-height:1.7;
 }
-
-.leader-card strong{
-    color:var(--text);
-}
-/* =========================================================
-   COACHCARTS LAB
-   STYLESHEET - PART 2
-   Coaches • Offerings • Lessons • Impact • Platforms
-   • Get Involved
-   ========================================================= */
 
 /* ================= COACHES ================= */
 
@@ -354,33 +347,37 @@ ul{
 }
 
 .coach-card h3{
-    margin-bottom:4px;
-    font-size:1.35rem;
-}
-
-.coach-card h4{
-    margin-bottom:15px;
-    color:var(--muted);
-    font-weight:500;
+    margin-bottom:6px;
 }
 
 .coach-card p{
     color:var(--muted);
-    margin-bottom:14px;
-    font-size:.97rem;
+    margin-bottom:12px;
 }
 
-.coach-card strong{
+/* ================= COACH CONTACT (FIXED) ================= */
+
+.coach-contact{
+    margin-top:14px;
+    padding-top:12px;
+    border-top:1px solid var(--border);
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    flex-wrap:wrap;
+    font-size:.9rem;
+    color:var(--muted);
+}
+
+.coach-contact span{
+    white-space:nowrap;
+}
+
+.coach-contact strong{
     color:var(--text);
 }
 
-/* ================= OFFERINGS ================= */
-
-#offerings{
-    background:#fafafa;
-}
-
-/* ================= LESSON GRID ================= */
+/* ================= OFFERINGS / LESSONS ================= */
 
 .lesson-grid{
     display:grid;
@@ -421,7 +418,6 @@ ul{
 }
 
 .lesson-card ul{
-    margin-top:5px;
     color:var(--muted);
     flex-grow:1;
 }
@@ -437,16 +433,7 @@ ul{
     margin-top:30px;
 }
 
-.lesson-footer h3{
-    margin:0;
-    font-size:1.2rem;
-}
-
-/* ================= IMPACT ================= */
-
-#impact{
-    text-align:center;
-}
+/* ================= IMPACT / FEATURES ================= */
 
 .features{
     display:grid;
@@ -478,241 +465,23 @@ ul{
     color:var(--muted);
 }
 
-/* ================= PLATFORMS ================= */
-
-#platforms{
-    background:#fafafa;
-}
-
-#platforms .lesson-card{
-    align-items:flex-start;
-}
-
-#platforms .lesson-card .btn{
-    margin-top:22px;
-}
-
-/* ================= GET INVOLVED ================= */
-
-#get-involved{
-    text-align:center;
-}
-
-#get-involved .lesson-grid{
-    align-items:stretch;
-}
-
-#get-involved .lesson-card{
-    text-align:left;
-}
-
-#get-involved .lesson-card h3{
-    text-align:center;
-    margin-bottom:18px;
-}
-
-#get-involved .lesson-card p{
-    line-height:1.8;
-}
-
-#get-involved .lesson-card .btn{
-    margin-top:28px;
-    align-self:center;
-}
-
-/* ================= SMALL UTILITIES ================= */
-
-.text-center{
-    text-align:center;
-}
-
-.mt-1{
-    margin-top:10px;
-}
-
-.mt-2{
-    margin-top:20px;
-}
-
-.mt-3{
-    margin-top:30px;
-}
-
-.mb-1{
-    margin-bottom:10px;
-}
-
-.mb-2{
-    margin-bottom:20px;
-}
-
-.mb-3{
-    margin-bottom:30px;
-}
-/* =========================================================
-   COACHCARTS LAB
-   STYLESHEET - PART 3
-   Future • Academy • Contact • Footer • Responsive
-   ========================================================= */
-
-/* ================= FUTURE ================= */
-
-#future{
-    background:#fafafa;
-}
-
-#future p{
-    max-width:900px;
-    margin:0 auto;
-    color:var(--muted);
-    text-align:center;
-    line-height:1.8;
-}
-
-/* ================= ACADEMY ================= */
-
-#academy{
-    text-align:center;
-}
-
-#academy > p{
-    max-width:900px;
-    margin:0 auto 30px;
-    color:var(--muted);
-    line-height:1.8;
-}
-
-#academy .lesson-grid{
-    margin:45px 0;
-}
-
-#academy .lesson-card{
-    text-align:center;
-}
-
-#academy .lesson-card h3{
-    font-size:1.5rem;
-    margin-bottom:14px;
-}
-
-#academy .lesson-card p{
-    margin-bottom:0;
-}
-
-/* ================= CONTACT ================= */
-
-#contact{
-    background:#fafafa;
-    text-align:center;
-}
-
-#contact p{
-    max-width:700px;
-    margin:0 auto 30px;
-    color:var(--muted);
-}
-
-#contact .hero-buttons{
-    justify-content:center;
-    margin-top:35px;
-}
-
 /* ================= FOOTER ================= */
 
 footer{
-    background:#111111;
-    color:#dddddd;
+    background:#111;
+    color:#ddd;
     padding:60px 8%;
     text-align:center;
 }
 
-footer h3{
-    color:#ffffff;
-    font-size:1.8rem;
-    margin-bottom:10px;
-}
-
 footer p{
-    margin:8px 0;
     color:#bdbdbd;
-}
-
-footer a{
-    color:#ffffff;
-    transition:var(--transition);
-}
-
-footer a:hover{
-    opacity:.75;
-}
-
-footer br{
-    display:block;
-    margin:12px 0;
-}
-
-/* ================= SCROLLBAR ================= */
-
-::-webkit-scrollbar{
-    width:10px;
-}
-
-::-webkit-scrollbar-track{
-    background:#f5f5f5;
-}
-
-::-webkit-scrollbar-thumb{
-    background:#bdbdbd;
-    border-radius:20px;
-}
-
-::-webkit-scrollbar-thumb:hover{
-    background:#8d8d8d;
-}
-
-/* ================= ANIMATIONS ================= */
-
-.hero-card,
-.lesson-card,
-.coach-card,
-.feature,
-.leader-card{
-    transition:
-        transform .25s ease,
-        box-shadow .25s ease,
-        border-color .25s ease;
-}
-
-.hero-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 18px 36px rgba(0,0,0,.08);
-}
-
-/* ================= SPACING ================= */
-
-section + section{
-    border-top:1px solid #f2f2f2;
+    margin:8px 0;
 }
 
 /* ================= RESPONSIVE ================= */
 
-@media (max-width:1100px){
-
-    .hero{
-        gap:40px;
-    }
-
-    .hero h1{
-        font-size:2.8rem;
-    }
-
-}
-
 @media (max-width:900px){
-
-    section{
-        padding:75px 7%;
-    }
 
     .hero{
         flex-direction:column;
@@ -720,26 +489,8 @@ section + section{
         min-height:auto;
     }
 
-    .hero-content{
-        max-width:100%;
-    }
-
     .hero-buttons{
         justify-content:center;
-    }
-
-    .hero-image{
-        width:100%;
-    }
-
-    .hero-card{
-        width:100%;
-        max-width:360px;
-    }
-
-    .navbar{
-        flex-wrap:wrap;
-        gap:20px;
     }
 
     .nav-links{
@@ -757,21 +508,6 @@ section + section{
         grid-template-columns:1fr;
     }
 
-    .lesson-footer{
-        flex-direction:column;
-        gap:18px;
-        align-items:flex-start;
-    }
-
-    .lesson-footer .btn{
-        width:100%;
-    }
-
-    .coach-card{
-        max-width:450px;
-        margin:0 auto;
-    }
-
 }
 
 @media (max-width:600px){
@@ -780,32 +516,12 @@ section + section{
         font-size:2.2rem;
     }
 
-    .section-title{
-        font-size:2rem;
-    }
-
-    .subsection-title{
-        font-size:1.4rem;
-    }
-
     .btn{
         width:100%;
     }
 
     .hero-buttons{
         flex-direction:column;
-        width:100%;
-    }
-
-    .lesson-card,
-    .coach-card,
-    .leader-card,
-    .feature{
-        padding:22px;
-    }
-
-    footer{
-        padding:45px 7%;
     }
 
 }
