@@ -471,3 +471,37 @@ footer p{
         flex-direction:column;
     }
 }
+
+/* ================= HARD CENTER FIX FOR CTA BLOCKS ================= */
+
+.cta-center{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+/* row of buttons (Discord / Email etc.) */
+.cta-row{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:16px;
+    flex-wrap:wrap;
+    width:100%;
+}
+
+/* IMPORTANT: prevents grid/flex parents from stretching buttons oddly */
+.cta-center .btn,
+.cta-row .btn{
+    width:auto !important;
+    display:inline-flex;
+}
+
+/* ensures section containers don't force left alignment */
+#contact .cta-center,
+#academy .cta-center{
+    margin:40px auto 0;
+}
