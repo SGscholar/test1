@@ -500,6 +500,11 @@ footer p{
     display:inline-flex;
 }
 
+#academy .lesson-card{
+    align-items:center;
+    text-align:center;
+}
+
 /* ensures section containers don't force left alignment */
 #contact .cta-center,
 #academy .cta-center{
