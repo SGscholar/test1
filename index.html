@@ -1,470 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Coach Carts Lab | Chess Coaching</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Coach Carts Lab | Private Chess Coaching</title>
 
-<style>
+    <meta name="description" content="Free private online chess coaching for players of all levels. Personalized lessons from Coach Carts Lab.">
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-body{
-    background:#f8f9fc;
-    color:#222;
-    line-height:1.6;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-/* Navigation */
-
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 8%;
-    background:white;
-    box-shadow:0 2px 12px rgba(0,0,0,.08);
-    position:sticky;
-    top:0;
-    z-index:100;
-}
-
-.logo{
-    font-size:28px;
-    font-weight:700;
-    color:#111;
-}
-
-.logo span{
-    color:#2d6cdf;
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:30px;
-}
-
-nav a{
-    text-decoration:none;
-    color:#333;
-    font-weight:500;
-}
-
-nav a:hover{
-    color:#2d6cdf;
-}
-
-/* Hero */
-
-.hero{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:90px 8%;
-    min-height:90vh;
-}
-
-.hero-text{
-    max-width:600px;
-}
-
-.hero-text h1{
-    font-size:60px;
-    margin-bottom:20px;
-}
-
-.hero-text h1 span{
-    color:#2d6cdf;
-}
-
-.hero-text p{
-    font-size:18px;
-    margin-bottom:35px;
-    color:#555;
-}
-
-.buttons{
-    display:flex;
-    gap:15px;
-}
-
-.btn{
-    background:#2d6cdf;
-    color:white;
-    padding:14px 28px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:600;
-    transition:.3s;
-}
-
-.btn:hover{
-    background:#154eb6;
-}
-
-.btn-outline{
-    border:2px solid #2d6cdf;
-    color:#2d6cdf;
-    background:white;
-}
-
-.btn-outline:hover{
-    background:#2d6cdf;
-    color:white;
-}
-
-.hero-image{
-    font-size:220px;
-}
-
-/* Sections */
-
-section{
-    padding:80px 8%;
-}
-
-.section-title{
-    text-align:center;
-    font-size:40px;
-    margin-bottom:50px;
-}
-
-/* Cards */
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-}
-
-.card{
-    background:white;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-}
-
-.card h3{
-    margin:20px 0;
-}
-
-.card p{
-    color:#666;
-}
-
-.icon{
-    font-size:40px;
-}
-
-/* Coach */
-
-.coach{
-    display:flex;
-    gap:60px;
-    align-items:center;
-    flex-wrap:wrap;
-}
-
-.coach img{
-    width:350px;
-    border-radius:20px;
-}
-
-.coach-content{
-    flex:1;
-}
-
-/* Pricing */
-
-.price{
-    text-align:center;
-    padding:35px;
-}
-
-.price h2{
-    font-size:42px;
-    color:#2d6cdf;
-}
-
-.price ul{
-    list-style:none;
-    margin:20px 0;
-}
-
-.price li{
-    padding:8px;
-}
-
-/* Testimonials */
-
-.testimonial{
-    font-style:italic;
-}
-
-.testimonial strong{
-    display:block;
-    margin-top:15px;
-    color:#2d6cdf;
-}
-
-/* Contact */
-
-.contact{
-    text-align:center;
-}
-
-.contact p{
-    margin:15px;
-}
-
-footer{
-    background:#111;
-    color:white;
-    text-align:center;
-    padding:25px;
-}
-
-/* Responsive */
-
-@media(max-width:900px){
-
-.hero{
-    flex-direction:column;
-    text-align:center;
-}
-
-.hero-image{
-    margin-top:50px;
-    font-size:150px;
-}
-
-.buttons{
-    justify-content:center;
-}
-
-.hero-text h1{
-    font-size:45px;
-}
-
-nav{
-    flex-direction:column;
-    gap:20px;
-}
-
-}
-
-</style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<nav>
+<!-- ================= NAVIGATION ================= -->
 
-<div class="logo">
-Coach <span>Carts Lab</span>
-</div>
+<header>
 
-<ul>
-<li><a href="#lessons">Lessons</a></li>
-<li><a href="#why">Why Us</a></li>
-<li><a href="#coach">Coach</a></li>
-<li><a href="#pricing">Pricing</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+<nav class="navbar">
+
+    <a href="#" class="logo">
+        Coach <span>Carts Lab</span>
+    </a>
+
+    <ul class="nav-links">
+
+        <li><a href="#home">Home</a></li>
+        <li><a href="#lessons">Lessons</a></li>
+        <li><a href="#coaches">Coaches</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+
+    </ul>
+
+    <button class="menu-btn">
+        ☰
+    </button>
 
 </nav>
 
-<section class="hero">
+</header>
 
-<div class="hero-text">
+<!-- ================= HERO ================= -->
 
-<h1>Master Chess with <span>Coach Carts Lab</span></h1>
+<section id="home" class="hero">
 
+    <div class="hero-content">
+
+        <h1>
+            Improve Your Chess with
+            <span>Coach Carts Lab</span>
+        </h1>
+
+        <p>
+
+            Free personalized online chess coaching for players of every level.
+            Whether you're learning your first opening or preparing for competitive tournaments,
+            our coaches are here to help you reach your goals.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#lessons" class="btn primary">
+                View Coaching
+            </a>
+
+            <a href="#coaches" class="btn secondary">
+                Meet Our Coaches
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-image">
+
+        <div class="hero-card">
+
+            ♔
+
+            <h2>100% Free</h2>
+
+            <p>
+                Private online lessons
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= WHY ================= -->
+
+<section class="why">
+
+<h2>Why Coach Carts Lab?</h2>
+
+<div class="features">
+
+<div class="feature">
+<h3>🎯 Personalized Lessons</h3>
 <p>
-Personalized coaching, structured lessons, tactical training,
-and tournament preparation for players of all levels.
+Every lesson is tailored to your current rating and improvement goals.
 </p>
-
-<div class="buttons">
-<a href="#lessons" class="btn">Start Learning</a>
-<a href="#pricing" class="btn btn-outline">View Plans</a>
 </div>
 
+<div class="feature">
+<h3>📈 Structured Progress</h3>
+<p>
+Follow a clear improvement path with homework, puzzles, and game reviews.
+</p>
 </div>
 
-<div class="hero-image">
-♔
+<div class="feature">
+<h3>♟️ Experienced Coaches</h3>
+<p>
+Learn from dedicated coaches who enjoy teaching players of all strengths.
+</p>
+</div>
+
+<div class="feature">
+<h3>💻 Online & Flexible</h3>
+<p>
+Lessons are held online and scheduled around your availability.
+</p>
+</div>
+
 </div>
 
 </section>
+
+<!-- ================= LESSONS ================= -->
 
 <section id="lessons">
 
 <h2 class="section-title">
-Lessons
+
+Private Coaching Levels
+
 </h2>
 
-<div class="grid">
+<div class="lesson-grid">
 
-<div class="card">
-<div class="icon">♟️</div>
-<h3>Beginner Chess</h3>
-<p>
-Learn the rules, opening principles,
-basic tactics, and checkmating patterns.
-</p>
-</div>
+<!-- Beginner -->
 
-<div class="card">
-<div class="icon">♞</div>
-<h3>Intermediate Training</h3>
-<p>
-Improve calculation, positional play,
-planning, and endgames.
-</p>
-</div>
+<div class="lesson-card">
 
-<div class="card">
-<div class="icon">♛</div>
-<h3>Advanced Coaching</h3>
-<p>
-Tournament preparation, opening repertoires,
-and game analysis.
-</p>
-</div>
+<h3>
 
-</div>
+Beginner Coaching
 
-</section>
+</h3>
 
-<section id="why">
+<h4>
 
-<h2 class="section-title">
-Why Choose Coach Carts Lab?
-</h2>
+Rating: 0–1199
 
-<div class="grid">
-
-<div class="card">
-<h3>Individual Coaching</h3>
-<p>
-One-on-one lessons tailored to your rating and goals.
-</p>
-</div>
-
-<div class="card">
-<h3>Game Analysis</h3>
-<p>
-Review your games to identify strengths and weaknesses.
-</p>
-</div>
-
-<div class="card">
-<h3>Structured Curriculum</h3>
-<p>
-A step-by-step learning path that builds lasting chess skills.
-</p>
-</div>
-
-<div class="card">
-<h3>Flexible Scheduling</h3>
-<p>
-Online lessons available around your schedule.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="coach">
-
-<h2 class="section-title">
-Meet Your Coach
-</h2>
-
-<div class="coach">
-
-<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600" alt="Coach">
-
-<div class="coach-content">
-
-<h2>Experienced Chess Instructor</h2>
+</h4>
 
 <p>
-Coach Carts Lab focuses on helping players build confidence,
-improve calculation, develop opening knowledge,
-and perform better in competitive events.
+
+Perfect for new players looking to build strong fundamentals,
+improve tactical awareness, understand opening principles,
+and develop confidence in every game.
+
 </p>
-
-<br>
-
-<p>
-Lessons are interactive, personalized,
-and supported with homework, puzzles,
-and detailed feedback.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="pricing">
-
-<h2 class="section-title">
-Pricing
-</h2>
-
-<div class="grid">
-
-<div class="card price">
-<h3>Starter</h3>
-<h2>$25</h2>
-<p>per lesson</p>
 
 <ul>
-<li>✓ 1 Hour Session</li>
-<li>✓ Homework</li>
-<li>✓ Game Review</li>
+
+<li>✓ Opening Principles</li>
+<li>✓ Basic Tactics</li>
+<li>✓ Checkmating Patterns</li>
+<li>✓ Essential Endgames</li>
+<li>✓ Game Reviews</li>
+
 </ul>
 
-<a href="#" class="btn">Book Now</a>
+<div class="lesson-footer">
+
+<h3>FREE</h3>
+
+<a href="#"
+class="btn primary">
+
+Book Lesson
+
+</a>
 
 </div>
 
-<div class="card price">
+</div>
 
-<h3>Monthly</h3>
+<!-- Intermediate -->
 
-<h2>$180</h2>
+<div class="lesson-card">
 
-<p>8 Lessons</p>
+<h3>
+
+Intermediate Coaching
+
+</h3>
+
+<h4>
+
+Rating: 1200–1599
+
+</h4>
+
+<p>
+
+Take your game to the next level through deeper calculation,
+strategic planning, positional understanding,
+and advanced tactical training.
+
+</p>
 
 <ul>
-<li>✓ Personalized Plan</li>
-<li>✓ Opening Preparation</li>
-<li>✓ Unlimited Puzzle Sets</li>
+
+<li>✓ Positional Chess</li>
+<li>✓ Candidate Moves</li>
+<li>✓ Endgame Technique</li>
+<li>✓ Middlegame Planning</li>
+<li>✓ Detailed Analysis</li>
+
 </ul>
 
-<a href="#" class="btn">Choose Plan</a>
+<div class="lesson-footer">
+
+<h3>FREE</h3>
+
+<a href="#"
+class="btn primary">
+
+Book Lesson
+
+</a>
+
+</div>
+
+</div>
+
+<!-- Advanced -->
+
+<div class="lesson-card">
+
+<h3>
+
+Advanced Coaching
+
+</h3>
+
+<h4>
+
+Rating: 1600+
+
+</h4>
+
+<p>
+
+Prepare for tournament play with advanced opening preparation,
+deep analysis,
+calculation training,
+and personalized improvement plans.
+
+</p>
+
+<ul>
+
+<li>✓ Opening Repertoire</li>
+<li>✓ Tournament Prep</li>
+<li>✓ Deep Analysis</li>
+<li>✓ Calculation Training</li>
+<li>✓ Performance Reviews</li>
+
+</ul>
+
+<div class="lesson-footer">
+
+<h3>FREE</h3>
+
+<a href="#"
+class="btn primary">
+
+Book Lesson
+
+</a>
+
+</div>
 
 </div>
 
@@ -472,35 +302,145 @@ Pricing
 
 </section>
 
-<section>
+<!-- ================= COACHES ================= -->
+
+<section id="coaches">
 
 <h2 class="section-title">
-Testimonials
+
+Meet Our Coaches
+
 </h2>
 
-<div class="grid">
+<div class="coach-grid">
 
-<div class="card testimonial">
+<div class="coach-card">
+<img src="https://placehold.co/300x300?text=Coach" alt="Coach Ethan">
+<h3>Coach Ethan Carter</h3>
+<p>Specializes in beginner improvement and tactical fundamentals.</p>
+</div>
 
-"My rating increased by over 250 points after a few months of coaching."
+<div class="coach-card">
+<img src="https://placehold.co/300x300?text=Coach" alt="Coach Olivia">
+<h3>Coach Olivia Chen</h3>
+<p>Focused on positional chess and long-term improvement.</p>
+</div>
 
-<strong>— Alex</strong>
+<div class="coach-card">
+<img src="https://placehold.co/300x300?text=Coach" alt="Coach Daniel">
+<h3>Coach Daniel Kim</h3>
+<p>Experienced tournament player and game analyst.</p>
+</div>
+
+<div class="coach-card">
+<img src="https://placehold.co/300x300?text=Coach" alt="Coach Sophia">
+<h3>Coach Sophia Patel</h3>
+<p>Passionate about helping intermediate players improve.</p>
+</div>
+
+<div class="coach-card">
+<img src="https://placehold.co/300x300?text=Coach" alt="Coach James">
+<h3>Coach James Wilson</h3>
+<p>Opening preparation and advanced strategy.</p>
+</div>
+
+<div class="coach-card">
+<img src="https://placehold.co/300x300?text=Coach" alt="Coach Isabella">
+<h3>Coach Isabella Garcia</h3>
+<p>Specializes in endgames and practical play.</p>
+</div>
+
+<div class="coach-card">
+<img src="https://placehold.co/300x300?text=Coach" alt="Coach Noah">
+<h3>Coach Noah Brown</h3>
+<p>Helping ambitious players reach tournament level.</p>
+</div>
+
+<div class="coach-card">
+<img src="https://placehold.co/300x300?text=Coach" alt="Coach Grace">
+<h3>Coach Grace Thompson</h3>
+<p>Focuses on confidence, consistency, and calculation.</p>
+</div>
 
 </div>
 
-<div class="card testimonial">
+</section>
 
-"The lessons are engaging and helped me understand strategy instead of memorizing moves."
+<!-- ================= FAQ ================= -->
 
-<strong>— Sarah</strong>
+<section id="faq">
+
+<h2 class="section-title">
+
+Frequently Asked Questions
+
+</h2>
+
+<div class="faq">
+
+<div class="faq-item">
+
+<h3>
+
+Who can apply?
+
+</h3>
+
+<p>
+
+Anyone interested in improving at chess.
+
+</p>
 
 </div>
 
-<div class="card testimonial">
+<div class="faq-item">
 
-"I finally feel confident entering tournaments."
+<h3>
 
-<strong>— Michael</strong>
+Are lessons really free?
+
+</h3>
+
+<p>
+
+Yes.
+All coaching is currently offered completely free.
+
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+
+How long are lessons?
+
+</h3>
+
+<p>
+
+Typically between 60 and 90 minutes depending on the coach.
+
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+
+What platform are lessons held on?
+
+</h3>
+
+<p>
+
+Lessons are conducted online using Discord, Zoom,
+Chess.com, and Lichess.
+
+</p>
 
 </div>
 
@@ -508,69 +448,55 @@ Testimonials
 
 </section>
 
-<section id="contact" class="contact">
+<!-- ================= CONTACT ================= -->
 
-<h2 class="section-title">
+<section id="contact">
+
+<h2>
+
 Contact
+
 </h2>
 
-<p>Email: coach@coachcartslab.com</p>
+<p>
 
-<p>Schedule a free consultation to discuss your chess goals.</p>
+Questions?
 
-<a href="mailto:coach@coachcartslab.com" class="btn">
-Book a Free Call
+Feel free to reach out.
+
+</p>
+
+<a
+href="mailto:coachcartslab@email.com"
+class="btn primary">
+
+Email Us
+
 </a>
 
 </section>
 
+<!-- ================= FOOTER ================= -->
+
 <footer>
 
 <p>
-© 2026 Coach Carts Lab. All Rights Reserved.
+
+© 2026 Coach Carts Lab
+
+</p>
+
+<p>
+
+Building stronger chess players one lesson at a time.
+
 </p>
 
 </footer>
 
-<script>
+<!-- ================= JS ================= -->
 
-// Smooth fade-in animation
-
-const cards=document.querySelectorAll('.card');
-
-const observer=new IntersectionObserver(entries=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.animate([
-{
-opacity:0,
-transform:'translateY(30px)'
-},
-{
-opacity:1,
-transform:'translateY(0)'
-}
-],{
-duration:700,
-fill:'forwards'
-});
-
-observer.unobserve(entry.target);
-
-}
-
-});
-
-});
-
-cards.forEach(card=>{
-observer.observe(card);
-});
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
