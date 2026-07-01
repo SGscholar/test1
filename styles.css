@@ -1,6 +1,4 @@
-/* =========================
-   COACH CARTS LAB STYLES
-   ========================= */
+/* ========================= COACH CARTS LAB STYLES ========================= */
 
 :root {
     --primary: #111111;
@@ -156,6 +154,7 @@ html {
     background: black;
     color: white;
 }
+
 /* ================= WHY SECTION ================= */
 
 .why {
@@ -245,6 +244,7 @@ html {
     line-height: 1;
     align-self: center;
 }
+
 .lesson-card {
     display: flex;
     flex-direction: column;
