@@ -510,6 +510,36 @@ footer p{
   justify-content: center; /* Horizontally centers the div */
   align-items: center;
 }
+/* Academy CTA */
+
+.academy-cta{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:40px auto 0;
+}
+/* Contact section */
+
+#contact{
+    text-align:center;
+}
+
+#contact p{
+    max-width:700px;
+    margin:0 auto 30px;
+    color:var(--muted);
+}
+
+.contact-buttons{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+    flex-wrap:wrap;
+    margin-top:10px;
+}
 
 /* ensures section containers don't force left alignment */
 #contact .cta-center,
